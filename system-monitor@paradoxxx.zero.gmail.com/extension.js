@@ -853,10 +853,11 @@ const Battery = new Lang.Class({
     refresh: function() {
         //do nothing here?
     },
-    update_battery: function(){
+    update_battery: function(){ /* this is where 3.12 is crashing, i do not use a notebook, so ... */
         // callback function for when battery stats updated.
         let battery_found = false;
         let isBattery = false;
+        /*
         this._proxy.GetDevicesRemote(Lang.bind(this, function(devices, error) {
             if (error) {
 
@@ -901,6 +902,7 @@ const Battery = new Lang.Class({
 
                 this.menu_item.actor.hide();
             }
+        */
         }));
     },
     hide_system_icon: function(override) {
